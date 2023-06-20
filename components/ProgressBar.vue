@@ -1,7 +1,20 @@
+<script setup>
+import ProgressBarItem from "./ProgressBarItem.vue";
+</script>
+
 <template>
   <div class="progress-bar">
     <div class="progress-start"></div>
-    <slot></slot>
+    <progress-bar-item
+        color="yellow"
+        visited="2"
+        type="castle"
+      ></progress-bar-item>
+      <progress-bar-item
+        color="green"
+        visited="3"
+        type="view"
+      ></progress-bar-item>
     <div class="progress-placeholder"></div>
     <div class="progress-end"></div>
   </div>
@@ -27,7 +40,7 @@ export default {};
 .progress-placeholder {
     display: inline-block;
     height: 26px;
-    width: 20%;
+    flex: auto;
     border-top: 2px solid #333;
     border-bottom: 2px solid #333;
     background-color: #ccc;
