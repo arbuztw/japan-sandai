@@ -14,7 +14,11 @@
 
 <script>
 export default {
-  props: ["color", "visited", "type"],
+  props: {
+    color: { type: String },
+    visited: { type: Number },
+    type: { type: String },
+  },
   computed: {
     progressWidth() {
       return `${this.visited * 30}px`;
