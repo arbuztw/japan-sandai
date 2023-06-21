@@ -1,7 +1,7 @@
 <template>
   <div class="progress-bar-item" v-if="visited > 0">
     <div class="icon-container">
-      <img :src="imageUrl" alt="" class="mark-icon" />
+      <img :src="`/images/${this.type}.png`" alt="" class="mark-icon" />
     </div>
     <div class="mark"></div>
     <div
@@ -22,9 +22,6 @@ export default {
   computed: {
     progressWidth() {
       return `${this.visited * 30}px`;
-    },
-    imageUrl() {
-      return new URL(`/assets/images/${this.type}.png`, import.meta.url).href;
     },
   },
 };
