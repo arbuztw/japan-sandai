@@ -234,12 +234,12 @@
   <ellipse stroke="#000000" stroke-opacity="0" ry="1.2" rx="1.2" cy="304.673505" cx="134.150507" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#ffd4aa" id="nakasu-fu"/>
   <ellipse stroke="#000000" stroke-opacity="0" ry="1.2" rx="1.2" cy="67.128055" cx="347.453525" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#ffd4aa" id="susukino-fu"/>
   <ellipse stroke-opacity="0" ry="1.2" rx="1.2" cy="273.643258" cx="240.120208" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#5fbf00" stroke="#000000" id="uji-tea"/>
-  <ellipse stroke-opacity="0" ry="1.2" rx="1.2" cy="274.900789" cx="286.711104" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#5fbf00" stroke="#000000" id="shitsuoka-tea"/>
+  <ellipse stroke-opacity="0" ry="1.2" rx="1.2" cy="274.900789" cx="286.711104" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#5fbf00" stroke="#000000" id="shizuoka-tea"/>
   <ellipse stroke-opacity="0" ry="1.2" rx="1.2" cy="250.734147" cx="310.680816" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#5fbf00" stroke="#000000" id="sayama-tea"/>
   <ellipse stroke="#000000" stroke-opacity="0" ry="1.2" rx="1.2" cy="282.20377" cx="253.135371" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#bf005f" id="matsusaka-cow"/>
   <ellipse stroke="#000000" stroke-opacity="0" ry="1.2" rx="1.2" cy="278.582619" cx="227.347493" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#bf005f" id="kobe-cow"/>
   <ellipse stroke="#000000" stroke-opacity="0" ry="1.2" rx="1.2" cy="270.734153" cx="242.089934" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#bf005f" id="oumi-cow"/>
   <ellipse stroke="#000000" stroke-opacity="0" ry="1.2" rx="1.2" cy="304.537106" cx="135.089923" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#aaffff" id="hakata-ramen"/>
-  <ellipse stroke="#000000" stroke-opacity="0" ry="1.2" rx="1.2" cy="67.991711" cx="349.302004" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#aaffff" id="sapparo-ramen"/>
+  <ellipse stroke="#000000" stroke-opacity="0" ry="1.2" rx="1.2" cy="67.991711" cx="349.302004" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#aaffff" id="sapporo-ramen"/>
   <ellipse stroke="#000000" stroke-opacity="0" ry="1.2" rx="1.2" cy="205.173509" cx="319.105069" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#aaffff" id="kitakata-ramen"/>
 </svg>

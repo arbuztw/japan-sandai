@@ -37,13 +37,13 @@ enum Spot {
     NAKASU_FU = "nakasu-fu",
     SUSUKINO_FU = "susukino-fu",
     UJI_TEA = "uji-tea",
-    SHITSUOKA_TEA = "shitsuoka-tea",
+    SHIZUOKA_TEA = "shizuoka-tea",
     SAYAMA_TEA = "sayama-tea",
     MATSUSAKA_COW = "matsusaka-cow",
     KOBE_COW = "kobe-cow",
     OUMI_COW = "oumi-cow",
     HAKATA_RAMEN = "hakata-ramen",
-    SAPPARO_RAMEN = "sapparo-ramen",
+    SAPPORO_RAMEN = "sapporo-ramen",
     KITAKATA_RAMEN = "kitakata-ramen"
 }
 export default Spot;
