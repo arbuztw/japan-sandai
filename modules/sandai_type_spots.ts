@@ -8,63 +8,63 @@ interface SpotAttr {
 
 export const SANDAI_TYPE_SPOTS: Record<SandaiType, SpotAttr> = {
   [SandaiType.CASTLE]: {
-    required: [],
+    required: [Spot.NAGOYA_CASTLE, Spot.OSAKA_CASTLE, Spot.KUMAMOTO_CASTLE],
     optional: [],
   },
   [SandaiType.NIGHT_VIEW]: {
-    required: [],
+    required: [Spot.INASA_NIGHT, Spot.MAYA_NIGHT, Spot.HAKODATE_NIGHT],
     optional: [],
   },
   [SandaiType.GARDEN]: {
-    required: [],
+    required: [Spot.KORAKU_EN, Spot.KAIRAKU_EN, Spot.KENROKU_EN],
     optional: [],
   },
   [SandaiType.VIEW]: {
-    required: [],
+    required: [Spot.MATSUSHIMA_VIEW, Spot.ITSUKUSHIMA_VIEW, Spot.AMANOHASHIDATE_VIEW],
     optional: [],
   },
   [SandaiType.GASSHO]: {
-    required: [],
+    required: [Spot.MIYAMA_VILLAGE, Spot.OUCHIJUKU_VILLAGE, Spot.SHIRAKAWA_VILLAGE],
     optional: [],
   },
   [SandaiType.ONSEN]: {
-    required: [],
+    required: [Spot.GERO_SPRING, Spot.ARIMA_SPRING, Spot.KASATSU_SPRING],
     optional: [],
   },
   [SandaiType.SHRINE]: {
-    required: [],
-    optional: [],
+    required: [Spot.ISE_JINGU],
+    optional: [Spot.HEIAN_JINGU, Spot.MEIJI_JINGU, Spot.ATSUTA_JINGU],
   },
   [SandaiType.FESTIVAL]: {
-    required: [],
+    required: [Spot.GION_MATSURI, Spot.KANDA_MATSURI, Spot.TENJIN_MATSURI],
     optional: [],
   },
   [SandaiType.FIREWORK]: {
-    required: [],
+    required: [Spot.NAGAO_HANABI, Spot.OOMAGARI_HANABI, Spot.TSUCHIURA_HANABI],
     optional: [],
   },
   [SandaiType.TENMANGU]: {
-    required: [],
+    required: [Spot.KITANO_TEN, Spot.WAKAURA_TEN, Spot.DAIZAIFU_TEN],
     optional: [],
   },
   [SandaiType.CHINA_TOWN]: {
-    required: [],
+    required: [Spot.NANKIN_CH, Spot.SHINCHI_CH, Spot.YOKOHAMA_CH],
     optional: [],
   },
   [SandaiType.RED_LIGHT]: {
-    required: [],
+    required: [Spot.NAKASU_FU, Spot.SUSUKINO_FU, Spot.YOSHIHARA_FU],
     optional: [],
   },
   [SandaiType.TEA]: {
-    required: [],
+    required: [Spot.UJI_TEA, Spot.SAYAMA_TEA, Spot.SHIZUOKA_TEA],
     optional: [],
   },
   [SandaiType.WAGYU]: {
-    required: [],
+    required: [Spot.OUMI_COW, Spot.KOBE_COW, Spot.MATSUSAKA_COW],
     optional: [],
   },
   [SandaiType.RAMEN]: {
-    required: [],
+    required: [Spot.HAKATA_RAMEN, Spot.SAPPORO_RAMEN, Spot.KITAKATA_RAMEN],
     optional: [],
   },
 };
