@@ -1,24 +1,28 @@
 <script lang="ts" setup>
-import SandaiType from "~/types/sandai_type";
+import { SandaiVisit } from "~/data/sandai_visit";
 import { getIconName, getColor } from "~/utils/sandai_types_util";
 
 const props = defineProps<{
-  type: SandaiType;
-  visited: number;
+  sandaiVisit: SandaiVisit;
 }>();
 
-const progressWidth = computed(() => `${props.visited * 30}px`);
+const progressWidth = computed(
+  () => `${props.sandaiVisit.numVisit.value * 30}px`
+);
 </script>
 
 <template>
-  <div class="progress-bar-item">
+  <div class="progress-bar-item" v-if="sandaiVisit.numVisit.value > 0">
     <div class="icon-container">
-      <img :src="`/images/${getIconName(type)}.png`" class="mark-icon" />
+      <img
+        :src="`/images/${getIconName(sandaiVisit.sandaiType)}.png`"
+        class="mark-icon"
+      />
     </div>
     <div class="mark"></div>
     <div
       class="progress"
-      :class="getColor(type)"
+      :class="getColor(sandaiVisit.sandaiType)"
       :style="{ width: progressWidth }"
     ></div>
   </div>
@@ -48,6 +52,7 @@ const progressWidth = computed(() => `${props.visited * 30}px`);
   height: 26px;
   border-top: 2px solid #333;
   border-bottom: 2px solid #333;
+  transition: width 0.3s;
 }
 
 .progress.yellow {
