@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-//import SandaiType from "~/types/sandai_type";
+import SandaiType from "~/types/sandai_type";
 import { SpotVisit } from "~/data/spot_visit";
 import { getChineseName } from "~/utils/sandai_types_util";
 const spotVisits = new SpotVisit();
@@ -7,7 +7,7 @@ const spotVisits = new SpotVisit();
 
 <template>
     <div class="modal-overlay"  @click="$emit('close-modal')">
-      <div class="modal" @click.stop>
+      <div class="modal" @click.stop style="overflow-y: scroll;">
         <img class="check" src="images/castle.png" alt="123" />
         <h6>Saved!</h6>
         <p>Your Details have been saved Successfully</p>
@@ -45,13 +45,16 @@ const spotVisits = new SpotVisit();
   
   .modal {
     text-align: center;
+    overflow-y: scroll !important;
     background-color: white;
     height: 80%;
     width: 80%;
     margin-top: 2%;
-    padding: 60px 0;
+    margin-bottom: 2%;
+    padding: 60px 0px;
     border-radius: 20px;
   }
+
   .close {
     margin: 10% 0 0 16px;
     cursor: pointer;
