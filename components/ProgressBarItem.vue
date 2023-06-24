@@ -22,8 +22,10 @@ const progressWidth = computed(
     <div class="mark"></div>
     <div
       class="progress"
-      :class="getColor(sandaiVisit.sandaiType)"
-      :style="{ width: progressWidth }"
+      :style="{
+        width: progressWidth,
+        backgroundColor: getColor(sandaiVisit.sandaiType),
+      }"
     ></div>
   </div>
 </template>
@@ -53,15 +55,5 @@ const progressWidth = computed(
   border-top: 2px solid #333;
   border-bottom: 2px solid #333;
   transition: width 0.3s;
-}
-
-.progress.yellow {
-  background-color: #ff9800;
-}
-.progress.blue {
-  background-color: #03a9f4;
-}
-.progress.green {
-  background-color: #8bc34a;
 }
 </style>
