@@ -2,6 +2,7 @@
 import SandaiType from "~/types/sandai_type";
 import { SpotVisit } from "~/data/spot_visit";
 import { getChineseName } from "~/utils/sandai_types_util";
+import { getSpotChineseName } from "~/utils/spot_util";
 import { SandaiVisit } from "~/data/sandai_visit";
 const props = defineProps<{
   sandaiVisits: SandaiVisit[];
@@ -11,21 +12,19 @@ const props = defineProps<{
 <template>
   <div class="modal-overlay" @click="$emit('close-modal')">
     <div class="modal" @click.stop style="overflow-y: scroll">
-      <img class="check" src="images/castle.png" alt="123" />
-      <h6>Saved!</h6>
-      <p>Your Details have been saved Successfully</p>
+      <img class="check" src="images/wand.png" alt="123" />
+      <h6>選擇拜訪過的日本三大！</h6>
       <div v-for="sandaiVisit in sandaiVisits">
         <h3>{{ getChineseName(sandaiVisit.sandaiType) }}</h3>
         <div v-for="spotAttr in sandaiVisit.required_spots">
           <input type="checkbox" v-model="spotAttr.visited.value" />
-          {{ spotAttr.spot }}
+          {{ getSpotChineseName(spotAttr.spot) }}
         </div>
         <div v-for="spotAttr in sandaiVisit.optional_spots">
           <input type="checkbox" v-model="spotAttr.visited.value" />
-          {{ spotAttr.spot }}
+          {{  getSpotChineseName(spotAttr.spot) }}
         </div>
       </div>
-      <button>Go Home</button>
       <div class="close" @click="$emit('close-modal')">
         <img class="close-img" src="images/night.png" alt="" />
       </div>
