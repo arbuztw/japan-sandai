@@ -10,8 +10,7 @@
         <img class="check" src="images/castle.png" alt="123" />
         <h6>Saved!</h6>
         <p>Your Details have been saved Successfully</p>
-        <!--
-        <div v-for="sandaiVisit in spotVisits.sandaiVisits">
+        <!--<div v-for="sandaiVisit in spotVisits.sandaiVisits">
             <h3>{{ sandaiVisit.sandaiType }}</h3>
             <div v-for="spotAttr in sandaiVisit.required_spots">
             <input type="checkbox" v-model="spotAttr.visited.value" />
@@ -23,10 +22,10 @@
             </div>
         </div>-->    
         <button>Go Home</button>
-      </div>
-      <div class="close" @click="$emit('close-modal')">
-        <img class="close-img" src="~/assets/close-icon.svg" alt="" />
+        <div class="close" @click="$emit('close-modal')">
+            <img class="close-img" src="images/night.png" alt="" />
         </div>
+      </div>
     </div>
   </template>
   

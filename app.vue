@@ -7,7 +7,7 @@ import FormModal from "./components/FormModal.vue"
   <div>
     <progress-bar></progress-bar>
   </div>
-  <FormModal v-show="showModal" />
+  <FormModal v-show="showModal"  @close-modal="showModal = false"/>
   <div class="save-btn">
     <button @click="showModal = true">Save</button>
   </div>
