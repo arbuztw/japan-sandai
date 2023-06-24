@@ -1,16 +1,19 @@
 <script lang="ts" setup>
-import SandaiType from "~/types/sandai_type";
 import ProgressBarItem from "./ProgressBarItem.vue";
+import { SandaiVisit } from "~/data/sandai_visit";
+
+const props = defineProps<{
+  sandaiVisits: SandaiVisit[];
+}>();
 </script>
 
 <template>
   <div class="progress-bar">
     <div class="progress-start"></div>
     <progress-bar-item
-      :type="SandaiType.CASTLE"
-      :visited="2"
+      v-for="sandaiVisit in sandaiVisits"
+      :sandai-visit="sandaiVisit"
     ></progress-bar-item>
-    <progress-bar-item :type="SandaiType.VIEW" :visited="3"></progress-bar-item>
     <div class="progress-placeholder"></div>
     <div class="progress-end"></div>
   </div>
@@ -21,6 +24,7 @@ import ProgressBarItem from "./ProgressBarItem.vue";
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  min-height: 66px;
 }
 .progress-start {
   display: inline-block;
