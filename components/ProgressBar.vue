@@ -10,9 +10,10 @@ const props = defineProps<{
 <template>
   <div class="progress-bar">
     <div class="progress-start"></div>
-    <progress-bar-item :sandai-visit="sandaiVisits[0]"></progress-bar-item>
-    <progress-bar-item :sandai-visit="sandaiVisits[3]"></progress-bar-item>
-    <progress-bar-item :sandai-visit="sandaiVisits[5]"></progress-bar-item>
+    <progress-bar-item
+      v-for="sandaiVisit in sandaiVisits"
+      :sandai-visit="sandaiVisit"
+    ></progress-bar-item>
     <div class="progress-placeholder"></div>
     <div class="progress-end"></div>
   </div>
