@@ -9,17 +9,29 @@ export function getIconName(type: SandaiType) {
     case SandaiType.ONSEN:
       return "onsen";
     case SandaiType.NIGHT_VIEW:
+      return "night";
     case SandaiType.GARDEN:
+      return "garden";
     case SandaiType.GASSHO:
+      return "home";
     case SandaiType.SHRINE:
+      return "shrine";
     case SandaiType.FESTIVAL:
+      return "festival";
     case SandaiType.FIREWORK:
+      return "firework";
     case SandaiType.TENMANGU:
+      return "ten";
     case SandaiType.CHINA_TOWN:
+      return "ch";
     case SandaiType.RED_LIGHT:
+      return "red";
     case SandaiType.TEA:
+      return "tea";
     case SandaiType.WAGYU:
+      return "wagyu";
     case SandaiType.RAMEN:
+      return "ramen";
     default:
       // TODO: Add icons.
       return "view";
