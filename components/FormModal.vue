@@ -1,7 +1,8 @@
-<script setup>
+<script lang="ts" setup>
 //import SandaiType from "~/types/sandai_type";
-//import { SpotVisit } from "~/data/spot_visit";
-//const spotVisits = new SpotVisit();
+import { SpotVisit } from "~/data/spot_visit";
+import { getChineseName } from "~/utils/sandai_types_util";
+const spotVisits = new SpotVisit();
 </script>
 
 <template>
@@ -10,8 +11,8 @@
         <img class="check" src="images/castle.png" alt="123" />
         <h6>Saved!</h6>
         <p>Your Details have been saved Successfully</p>
-        <!--<div v-for="sandaiVisit in spotVisits.sandaiVisits">
-            <h3>{{ sandaiVisit.sandaiType }}</h3>
+        <div v-for="sandaiVisit in spotVisits.sandaiVisits">
+            <h3>{{ getChineseName(sandaiVisit.sandaiType) }}</h3>
             <div v-for="spotAttr in sandaiVisit.required_spots">
             <input type="checkbox" v-model="spotAttr.visited.value" />
             {{ spotAttr.spot }}
@@ -20,7 +21,7 @@
                 <input type="checkbox" v-model="spotAttr.visited.value" />
                 {{ spotAttr.spot }}
             </div>
-        </div>-->    
+        </div>    
         <button>Go Home</button>
         <div class="close" @click="$emit('close-modal')">
             <img class="close-img" src="images/night.png" alt="" />
