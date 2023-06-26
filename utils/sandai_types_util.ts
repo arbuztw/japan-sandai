@@ -74,3 +74,41 @@ export function getColor(type: SandaiType) {
       return "blue";
   }
 }
+  
+export function getChineseName(type: SandaiType) {
+  switch (type) {
+    case SandaiType.CASTLE:
+      return "名城";
+    case SandaiType.VIEW:
+      return "名景";
+    case SandaiType.ONSEN:
+      return "溫泉";
+    case SandaiType.NIGHT_VIEW:
+      return "夜景";
+    case SandaiType.GARDEN:
+      return "名園";
+    case SandaiType.GASSHO:
+      return "合掌村";
+    case SandaiType.SHRINE:
+      return "神宮";
+    case SandaiType.FESTIVAL:
+      return "祭典";
+    case SandaiType.FIREWORK:
+      return "花火節";
+    case SandaiType.TENMANGU:
+      return "天滿宮";
+    case SandaiType.CHINA_TOWN:
+      return "中華街";
+    case SandaiType.RED_LIGHT:
+      return "風俗區";
+    case SandaiType.TEA:
+      return "名茶";
+    case SandaiType.WAGYU:
+      return "和牛";
+    case SandaiType.RAMEN:
+      return "拉麵";
+    default:
+      // TODO: Add icons.
+      return "view";
+  }
+}

@@ -35,16 +35,16 @@ export const SANDAI_TYPE_SPOTS: Record<SandaiType, SpotAttr> = {
     required: [Spot.MATSUSHIMA_VIEW, Spot.ITSUKUSHIMA_VIEW, Spot.AMANOHASHIDATE_VIEW],
     optional: [],
   },
-  [SandaiType.GARDEN]: {
-    required: [Spot.KORAKU_EN, Spot.KAIRAKU_EN, Spot.KENROKU_EN],
-    optional: [],
-  },
   [SandaiType.TEA]: {
     required: [Spot.UJI_TEA, Spot.SAYAMA_TEA, Spot.SHIZUOKA_TEA],
     optional: [],
   },
+  [SandaiType.GARDEN]: {
+    required: [Spot.KORAKU_EN, Spot.KAIRAKU_EN, Spot.KENROKU_EN],
+    optional: [],
+  },
   [SandaiType.ONSEN]: {
-    required: [Spot.GERO_SPRING, Spot.ARIMA_SPRING, Spot.KASATSU_SPRING],
+    required: [Spot.GERO_SPRING, Spot.ARIMA_SPRING, Spot.KUSATSU_SPRING],
     optional: [],
   },
   [SandaiType.NIGHT_VIEW]: {
