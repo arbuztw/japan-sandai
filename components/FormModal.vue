@@ -14,7 +14,8 @@ const props = defineProps<{
     <div class="modal" @click.stop style="overflow-y: scroll">
       <img class="check" src="images/wand.png" alt="123" />
       <h6>選擇拜訪過的日本三大！</h6>
-      <div v-for="sandaiVisit in sandaiVisits">
+      <div id="flex-container">
+      <div class= "sandai-box" v-for="sandaiVisit in sandaiVisits">
         <h3>{{ getChineseName(sandaiVisit.sandaiType) }}</h3>
         <div v-for="spotAttr in sandaiVisit.required_spots">
           <input type="checkbox" v-model="spotAttr.visited.value" />
@@ -24,6 +25,7 @@ const props = defineProps<{
           <input type="checkbox" v-model="spotAttr.visited.value" />
           {{  getSpotChineseName(spotAttr.spot) }}
         </div>
+      </div>
       </div>
       <div class="close" @click="$emit('close-modal')">
         <img class="close-img" src="images/night.png" alt="" />
@@ -67,6 +69,19 @@ const props = defineProps<{
 
 .check {
   width: 150px;
+}
+
+#flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#flex-container > .sandai-box {
+  flex: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 h6 {
