@@ -16,6 +16,7 @@ const props = defineProps<{
       <h6>選擇拜訪過的日本三大！</h6>
       <div id="flex-container">
       <div class= "sandai-box" v-for="sandaiVisit in sandaiVisits">
+        <img :src="`/images/${getIconName(sandaiVisit.sandaiType)}.png`">
         <h3>{{ getChineseName(sandaiVisit.sandaiType) }}</h3>
         <div v-for="spotAttr in sandaiVisit.required_spots">
           <input type="checkbox" v-model="spotAttr.visited.value" />
