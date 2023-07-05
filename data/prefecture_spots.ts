@@ -7,7 +7,7 @@ export const PREFECTURE_SPOTS: Record<Prefecture, Array<Spot>> = {
   [Prefecture.JP_03]: [],
   [Prefecture.JP_04]: [Spot.MATSUSHIMA_VIEW],
   [Prefecture.JP_05]: [Spot.OOMAGARI_HANABI],
-  [Prefecture.JP_06]: [Spot.KASATSU_SPRING],
+  [Prefecture.JP_06]: [Spot.KUSATSU_SPRING],
   [Prefecture.JP_07]: [Spot.OUCHIJUKU_VILLAGE, Spot.KITAKATA_RAMEN],
   [Prefecture.JP_08]: [Spot.MATSUSHIMA_VIEW, Spot.TSUCHIURA_HANABI],
   [Prefecture.JP_09]: [],

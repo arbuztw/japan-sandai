@@ -16,7 +16,7 @@ enum Spot {
     OUCHIJUKU_VILLAGE = "ouchijuku-village",
     GERO_SPRING = "gero-spring",
     ARIMA_SPRING = "arima-spring",
-    KASATSU_SPRING = "kasatsu-spring",
+    KUSATSU_SPRING = "kusatsu-spring",
     ISE_JINGU = "ise-jingu",
     MEIJI_JINGU = "meiji-jingu",
     HEIAN_JINGU = "heian-jingu",

@@ -42,7 +42,7 @@ export class SpotVisit {
     [Spot.OUCHIJUKU_VILLAGE]: false,
     [Spot.GERO_SPRING]: false,
     [Spot.ARIMA_SPRING]: false,
-    [Spot.KASATSU_SPRING]: false,
+    [Spot.KUSATSU_SPRING]: false,
     [Spot.ISE_JINGU]: false,
     [Spot.MEIJI_JINGU]: false,
     [Spot.HEIAN_JINGU]: false,

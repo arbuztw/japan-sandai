@@ -44,7 +44,7 @@ export const SANDAI_TYPE_SPOTS: Record<SandaiType, SpotAttr> = {
     optional: [],
   },
   [SandaiType.ONSEN]: {
-    required: [Spot.GERO_SPRING, Spot.ARIMA_SPRING, Spot.KASATSU_SPRING],
+    required: [Spot.GERO_SPRING, Spot.ARIMA_SPRING, Spot.KUSATSU_SPRING],
     optional: [],
   },
   [SandaiType.NIGHT_VIEW]: {
