@@ -23,12 +23,24 @@ const props = defineProps<{
           <div class="sandai-content">
             <h3>{{ getChineseName(sandaiVisit.sandaiType) }}</h3>
             <div v-for="spotAttr in sandaiVisit.required_spots">
-              <input type="checkbox" v-model="spotAttr.visited.value" />
-              {{ getSpotChineseName(spotAttr.spot) }}
+              <input
+                type="checkbox"
+                v-model="spotAttr.visited.value"
+                :id="spotAttr.spot"
+              />
+              <label :for="spotAttr.spot">{{
+                getSpotChineseName(spotAttr.spot)
+              }}</label>
             </div>
             <div v-for="spotAttr in sandaiVisit.optional_spots">
-              <input type="checkbox" v-model="spotAttr.visited.value" />
-              {{ getSpotChineseName(spotAttr.spot) }}
+              <input
+                type="checkbox"
+                v-model="spotAttr.visited.value"
+                :id="spotAttr.spot"
+              />
+              <label :for="spotAttr.spot">{{
+                getSpotChineseName(spotAttr.spot)
+              }}</label>
             </div>
           </div>
         </div>
@@ -128,5 +140,10 @@ button {
   font-size: 14px;
   border-radius: 16px;
   margin-top: 50px;
+}
+
+label {
+  padding-left: 0.5em;
+  cursor: pointer;
 }
 </style>
