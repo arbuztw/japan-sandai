@@ -14,19 +14,24 @@ const props = defineProps<{
     <div class="modal" @click.stop style="overflow-y: scroll">
       <img class="check" src="images/wand.png" alt="123" />
       <h6>選擇拜訪過的日本三大！</h6>
-      <div id="flex-container">
-      <div class= "sandai-box" v-for="sandaiVisit in sandaiVisits">
-        <img :src="`/images/${getIconName(sandaiVisit.sandaiType)}.png`">
-        <h3>{{ getChineseName(sandaiVisit.sandaiType) }}</h3>
-        <div v-for="spotAttr in sandaiVisit.required_spots">
-          <input type="checkbox" v-model="spotAttr.visited.value" />
-          {{ getSpotChineseName(spotAttr.spot) }}
+      <div id="sandai-box-container">
+        <div class="sandai-box" v-for="sandaiVisit in sandaiVisits">
+          <img
+            :src="`/images/${getIconName(sandaiVisit.sandaiType)}.png`"
+            class="sandai-img"
+          />
+          <div class="sandai-content">
+            <h3>{{ getChineseName(sandaiVisit.sandaiType) }}</h3>
+            <div v-for="spotAttr in sandaiVisit.required_spots">
+              <input type="checkbox" v-model="spotAttr.visited.value" />
+              {{ getSpotChineseName(spotAttr.spot) }}
+            </div>
+            <div v-for="spotAttr in sandaiVisit.optional_spots">
+              <input type="checkbox" v-model="spotAttr.visited.value" />
+              {{ getSpotChineseName(spotAttr.spot) }}
+            </div>
+          </div>
         </div>
-        <div v-for="spotAttr in sandaiVisit.optional_spots">
-          <input type="checkbox" v-model="spotAttr.visited.value" />
-          {{  getSpotChineseName(spotAttr.spot) }}
-        </div>
-      </div>
       </div>
       <div class="close" @click="$emit('close-modal')">
         <img class="close-img" src="images/night.png" alt="" />
@@ -55,7 +60,7 @@ const props = defineProps<{
   width: 80%;
   margin-top: 2%;
   margin-bottom: 2%;
-  padding: 60px 0px;
+  padding: 60px 30px;
   border-radius: 20px;
 }
 
@@ -72,17 +77,36 @@ const props = defineProps<{
   width: 150px;
 }
 
-#flex-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+#sandai-box-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 10px;
 }
 
-#flex-container > .sandai-box {
-  flex: 50%;
+.sandai-box {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: 20px 30px;
+  border-radius: 15px;
+  background-color: #eee;
+  column-gap: 30px;
+}
+
+.sandai-img {
+  object-fit: scale-down;
+}
+
+.sandai-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
+h3 {
+  margin: 0;
 }
 
 h6 {
