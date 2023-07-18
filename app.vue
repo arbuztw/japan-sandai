@@ -6,7 +6,7 @@ import JapanMap from "./components/map/JapanMap.vue";
 
 useHead({
   bodyAttrs: {
-    style: "background-color: #c7f0ff",
+    style: "background-color: #c7f0ff; font-family: sans-serif;",
   },
 });
 
