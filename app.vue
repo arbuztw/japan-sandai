@@ -11,6 +11,7 @@ useHead({
 });
 
 const spotVisits = new SpotVisit();
+const showModal = ref(false);
 </script>
 
 <template>
@@ -26,13 +27,3 @@ const spotVisits = new SpotVisit();
     <button @click="showModal = true">Save</button>
   </div>
 </template>
-<script>
-export default {
-  components: { FormModal },
-  data() {
-    return {
-      showModal: false,
-    };
-  },
-};
-</script>
