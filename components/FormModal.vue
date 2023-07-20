@@ -4,9 +4,11 @@ import { SpotVisit } from "~/data/spot_visit";
 import { getChineseName } from "~/utils/sandai_types_util";
 import { getSpotChineseName } from "~/utils/spot_util";
 import { SandaiVisit } from "~/data/sandai_visit";
+import Spot from "~/types/spot";
 const props = defineProps<{
   sandaiVisits: SandaiVisit[];
 }>();
+const getCheckboxId = (spot: Spot) => `${spot}-checkbox`;
 </script>
 
 <template>
@@ -26,9 +28,9 @@ const props = defineProps<{
               <input
                 type="checkbox"
                 v-model="spotAttr.visited.value"
-                :id="spotAttr.spot"
+                :id="getCheckboxId(spotAttr.spot)"
               />
-              <label :for="spotAttr.spot">{{
+              <label :for="getCheckboxId(spotAttr.spot)">{{
                 getSpotChineseName(spotAttr.spot)
               }}</label>
             </div>
@@ -36,9 +38,9 @@ const props = defineProps<{
               <input
                 type="checkbox"
                 v-model="spotAttr.visited.value"
-                :id="spotAttr.spot"
+                :id="getCheckboxId(spotAttr.spot)"
               />
-              <label :for="spotAttr.spot">{{
+              <label :for="getCheckboxId(spotAttr.spot)">{{
                 getSpotChineseName(spotAttr.spot)
               }}</label>
             </div>
