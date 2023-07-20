@@ -10,7 +10,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div id="japan-map-container">
+  <div id="japan-map-wrapper">
     <!-- Created for MapSVG plugin: http://mapsvg.com -->
     <svg
       xmlns:mapsvg="http://mapsvg.com"
@@ -675,11 +675,12 @@ const props = defineProps<{
 </template>
 
 <style scoped>
-#japan-map-container {
+#japan-map-wrapper {
   margin-top: 10px;
   text-align: center;
+  height: 100%;
 }
 #japan-map {
-  height: 100vh;
+  height: 100%;
 }
 </style>
