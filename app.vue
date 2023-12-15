@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import ProgressBar from "./components/ProgressBar.vue";
 import FormModal from "./components/FormModal.vue";
 import { SpotVisit } from "~/data/spot_visit";
@@ -6,25 +6,50 @@ import JapanMap from "./components/map/JapanMap.vue";
 
 const spotVisits = new SpotVisit();
 const showModal = ref(false);
+
+const visitedSandai = computed(() =>
+  spotVisits.sandaiVisits
+    .filter((sandaiVisit) => sandaiVisit.numVisit.value == 3)
+    .map((sandaiVisit) => sandaiVisit.sandaiType)
+);
+
+function getLevelTitle(ratio: number) {
+  if (ratio <= 0.1) return "初心冒險者";
+  else if (ratio <= 0.2) return "新手冒險家 I";
+  else if (ratio <= 0.3) return "新手冒險家 II";
+  else if (ratio <= 0.4) return "奇遇探險家 I";
+  else if (ratio <= 0.5) return "奇遇探險家 II";
+  else if (ratio <= 0.6) return "景點尋寶家 I";
+  else if (ratio <= 0.7) return "景點尋寶家 II";
+  else if (ratio <= 0.8) return "老手冒險家";
+  else if (ratio <= 0.9) return "景點征服者";
+  else "日本探險達人";
+}
 </script>
 
 <template>
   <div id="page-container">
     <div id="map-container">
       <div id="main-container">
-        <div id="result">
-          <div class="result-title">全制霸</div>
-          <div class="result-content">
-            三大拉麵 三大拉麵<br />
-            三大拉麵 三大拉麵<br />
-            三大拉麵 三大拉麵<br />
-            三大拉麵 三大拉麵<br />
-            三大拉麵 三大拉麵<br />
-            三大拉麵 三大拉麵<br />
-            三大拉麵 三大拉麵<br />
-            三大拉麵<br />
+        <div class="result-container">
+          <div v-if="visitedSandai.length > 0" class="result">
+            <div class="result-title">
+              <img src="images/star.png" />
+              全制霸
+              <img src="images/star.png" />
+            </div>
+            <div class="sandai-items">
+              <span v-for="sandai in visitedSandai" class="sandai-item"
+                >三大{{ getChineseName(sandai) }}</span
+              >
+            </div>
           </div>
-          <div class="result-title">制霸進度: 87% 不能再高了</div>
+          <div v-else class="result">還在稱霸三大的路上...</div>
+          <div class="result-progress-title">
+            制霸進度:
+            {{ Math.round(spotVisits.ratio.value * 100) }}%&nbsp;&nbsp;
+            {{ getLevelTitle(spotVisits.ratio.value) }}
+          </div>
         </div>
         <japan-map
           :spot-visits="spotVisits.visited"
@@ -63,15 +88,48 @@ const showModal = ref(false);
   justify-content: center;
   height: 100%;
 }
-#result {
+.result-container {
   padding: 0 5em;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
 }
 .result-title {
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   font-size: 25pt;
+  margin-bottom: 0.5em;
 }
-.result-content {
+
+.result-title > img {
+  height: 25pt;
+  vertical-align: middle;
+}
+.result {
   font-size: 20pt;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.result-progress-title {
+  font-size: 25pt;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.sandai-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.sandai-item:nth-child(odd) {
+  text-align: right;
+}
+.sandai-item:nth-child(even) {
+  text-align: left;
+}
+.sandai-item {
+  margin: 0 0.5em;
 }
 </style>
