@@ -1,8 +1,15 @@
 import Prefecture from "~/types/prefecture";
+import Spot from "~/types/spot";
 
 interface PrefectureMapAttr {
   d: string;
   title: string;
+}
+
+interface SpotMapAttr {
+  cy: number;
+  cx: number;
+  fill: string;
 }
 
 export const PrefectureMapData: Readonly<
@@ -192,4 +199,57 @@ export const PrefectureMapData: Readonly<
     d: "m 327.89993,199.31889 -0.3,1.71 0.04,2.01 0.55,0.41 -1.33,1.61 -1.3,-0.26 -0.74,0.56 -1.47,-1.12 -1.23,0.46 -0.97,-1.68 -0.33,0.35 -0.63,0.07 -0.61,-0.39 -0.94,0.58 -0.63,-0.68 -0.79,0.18 0,0 -0.45,-0.77 -0.45,0.13 -0.66,-0.32 -0.66,-1.16 0.59,-3.17 0.69,-0.51 -0.35,-0.76 0.34,-0.82 -0.16,-1.31 0.52,-0.82 1.58,0.22 1.37,-0.86 0.79,-1.59 -1.15,-1.23 -1.84,-0.48 -0.8,-1.13 0.4,-1.99 -0.24,-0.29 -1.48,-0.32 -1.81,-0.96 0,0 1.17,-3.08 1.74,-1.51 1.14,-1.5 1.13,-4.08 0.61,-1.04 0.7,-2.64 -0.18,-0.58 0,0 2.51,0.41 0.37,-0.46 0.98,-0.24 0.2,1.17 0.71,0.18 0.79,0.7 3.08,0.94 1.08,-0.27 0.35,0.77 1.06,0.08 0.58,1.8 1.52,0.53 0.24,0.45 0,0 -0.23,0.35 1.06,1.02 0.19,1.06 0.83,0.45 -0.68,1.1 0.22,0.97 -0.43,1.15 -0.4,0.1 -0.66,-0.35 -0.1,0.23 0.61,1.37 0.03,0.54 -0.38,0.65 0.27,0.91 0.6,0.39 0.2,0.7 -0.61,1.6 -1.09,1.14 0.16,0.6 -1.05,1.32 -0.16,1.02 0.23,1.23 -1.11,1.58 -0.19,1.02 -0.99,0.55 -1.72,0.01 0.07,1.99 z",
     title: "Yamagata",
   },
+};
+
+export const SpotMapData: Readonly<Record<Spot, SpotMapAttr>> = {
+  [Spot.NAGOYA_CASTLE]: { cy: 268.629279, cx: 261.23841, fill: "#5f00bf" },
+  [Spot.OSAKA_CASTLE]: { cy: 278.270797, cx: 234.35796, fill: "#5f00bf" },
+  [Spot.KUMAMOTO_CASTLE]: { cy: 324.479037, cx: 139.514169, fill: "#5f00bf" },
+  [Spot.HAKODATE_NIGHT]: { cy: 101.920477, cx: 337.292933, fill: "#5f00bf" },
+  [Spot.MAYA_NIGHT]: { cy: 277.183825, cx: 227.044434, fill: "#5f00bf" },
+  [Spot.INASA_NIGHT]: { cy: 324.502023, cx: 122.236294, fill: "#5f00bf" },
+  [Spot.KENROKU_EN]: { cy: 235.893203, cx: 255.548798, fill: "#007f00" },
+  [Spot.KORAKU_EN]: { cy: 280.884943, cx: 202.169775, fill: "#007f00" },
+  [Spot.KAIRAKU_EN]: { cy: 239.678333, cx: 330.930109, fill: "#007f00" },
+  [Spot.MATSUSHIMA_VIEW]: { cy: 189.521975, cx: 342.423217, fill: "#ff7f00" },
+  [Spot.AMANOHASHIDATE_VIEW]: {
+    cy: 258.688657,
+    cx: 228.089887,
+    fill: "#ff7f00",
+  },
+  [Spot.ITSUKUSHIMA_VIEW]: { cy: 289.491711, cx: 170.802046, fill: "#ff7f00" },
+  [Spot.SHIRAKAWA_VILLAGE]: { cy: 242.112871, cx: 261.514151, fill: "#bf00bf" },
+  [Spot.MIYAMA_VILLAGE]: { cy: 264.612891, cx: 235.680852, fill: "#bf00bf" },
+  [Spot.OUCHIJUKU_VILLAGE]: { cy: 213.203792, cx: 320.059636, fill: "#bf00bf" },
+  [Spot.GERO_SPRING]: { cy: 253.037126, cx: 267.226303, fill: "#005fbf" },
+  [Spot.ARIMA_SPRING]: { cy: 274.961359, cx: 228.392932, fill: "#005fbf" },
+  [Spot.KUSATSU_SPRING]: { cy: 232.628026, cx: 295.271717, fill: "#005fbf" },
+  [Spot.ISE_JINGU]: { cy: 284.431072, cx: 257.271729, fill: "#ff0000" },
+  [Spot.MEIJI_JINGU]: { cy: 255.976577, cx: 316.438391, fill: "#ff0000" },
+  [Spot.HEIAN_JINGU]: { cy: 269.976578, cx: 238.695958, fill: "#ff0000" },
+  [Spot.ATSUTA_JINGU]: { cy: 270.067463, cx: 260.695971, fill: "#ff0000" },
+  [Spot.KANDA_MATSURI]: { cy: 254.825046, cx: 317.665659, fill: "#ffaaaa" },
+  [Spot.GION_MATSURI]: { cy: 271.537121, cx: 238.165647, fill: "#ffaaaa" },
+  [Spot.TENJIN_MATSURI]: { cy: 280.037135, cx: 234.165667, fill: "#ffaaaa" },
+  [Spot.NAGAO_HANABI]: { cy: 209.491702, cx: 298.711125, fill: "#ffff00" },
+  [Spot.OOMAGARI_HANABI]: { cy: 156.825009, cx: 326.423227, fill: "#ffff00" },
+  [Spot.TSUCHIURA_HANABI]: { cy: 244.840194, cx: 326.423231, fill: "#ffff00" },
+  [Spot.KITANO_TEN]: { cy: 269.597736, cx: 237.2566, fill: "#56ff56" },
+  [Spot.DAIZAIFU_TEN]: { cy: 305.643231, cx: 135.423253, fill: "#56ff56" },
+  [Spot.WAKAURA_TEN]: { cy: 290.734134, cx: 228.014157, fill: "#56ff56" },
+  [Spot.YOKOHAMA_CH]: { cy: 261.067478, cx: 314.317189, fill: "#d4aaff" },
+  [Spot.NANKIN_CH]: { cy: 278.82505, cx: 226.105087, fill: "#d4aaff" },
+  [Spot.SHINCHI_CH]: { cy: 326.203798, cx: 122.438399, fill: "#d4aaff" },
+  [Spot.YOSHIHARA_FU]: { cy: 253.582614, cx: 318.408076, fill: "#ffd4aa" },
+  [Spot.NAKASU_FU]: { cy: 304.673505, cx: 134.150507, fill: "#ffd4aa" },
+  [Spot.SUSUKINO_FU]: { cy: 67.128055, cx: 347.453525, fill: "#ffd4aa" },
+  [Spot.UJI_TEA]: { cy: 273.643258, cx: 240.120208, fill: "#5fbf00" },
+  [Spot.SHIZUOKA_TEA]: { cy: 274.900789, cx: 286.711104, fill: "#5fbf00" },
+  [Spot.SAYAMA_TEA]: { cy: 250.734147, cx: 310.680816, fill: "#5fbf00" },
+  [Spot.MATSUSAKA_COW]: { cy: 282.20377, cx: 253.135371, fill: "#bf005f" },
+  [Spot.KOBE_COW]: { cy: 278.582619, cx: 227.347493, fill: "#bf005f" },
+  [Spot.OUMI_COW]: { cy: 270.734153, cx: 242.089934, fill: "#bf005f" },
+  [Spot.HAKATA_RAMEN]: { cy: 304.537106, cx: 135.089923, fill: "#aaffff" },
+  [Spot.SAPPORO_RAMEN]: { cy: 67.991711, cx: 349.302004, fill: "#aaffff" },
+  [Spot.KITAKATA_RAMEN]: { cy: 205.173509, cx: 319.105069, fill: "#aaffff" },
 };

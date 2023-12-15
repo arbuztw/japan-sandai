@@ -74,6 +74,7 @@ export class SpotVisit {
   });
   public sandaiVisits: Array<SandaiVisit>;
   public prefectureVisits: Array<PrefectureVisit>;
+  public ratio;
 
   public constructor() {
     {
@@ -92,5 +93,13 @@ export class SpotVisit {
         );
       }
     }
+    this.ratio = computed(() => {
+      return (
+        this.sandaiVisits
+          .map((sandaiVisit) => sandaiVisit.numVisit.value)
+          .reduce((total, val) => total + val, 0) /
+        (this.sandaiVisits.length * 3)
+      );
+    });
   }
 }

@@ -19,8 +19,15 @@ export class SandaiVisit {
       SANDAI_TYPE_SPOTS[sandaiType].optional,
       visited
     );
-    this.numVisit = computed(
-      () => this.required_spots.filter((attr) => attr.visited.value).length
-    );
+    this.numVisit = computed(() => {
+      let total_required = this.required_spots.length;
+      return (
+        this.required_spots.filter((attr) => attr.visited.value).length +
+        Math.min(
+          this.optional_spots.filter((attr) => attr.visited.value).length,
+          3 - total_required
+        )
+      );
+    });
   }
 }
