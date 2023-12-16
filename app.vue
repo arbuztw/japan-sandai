@@ -47,7 +47,7 @@ function getLevelTitle(ratio: number) {
           <div v-else class="result">還在稱霸三大的路上...</div>
           <div class="result-progress-title">
             制霸進度:
-            {{ Math.round(spotVisits.ratio.value * 100) }}%&nbsp;&nbsp;
+            {{ Math.round(spotVisits.ratio.value * 100) }}%<br />
             {{ getLevelTitle(spotVisits.ratio.value) }}
           </div>
         </div>
@@ -95,23 +95,31 @@ function getLevelTitle(ratio: number) {
   flex-direction: column;
   box-sizing: border-box;
   height: 100%;
+  /* font-size: clamp(1rem, 2vw, 15rem); */
 }
 @media (max-aspect-ratio: 1/1) {
+  #main-container {
+    justify-content: flex-start;
+  }
   .result-container {
+    padding: 0;
     position: absolute;
+    width: 50%;
+    height: 50%;
+    align-self: flex-start;
   }
 }
 .result-title {
-  font-size: 25pt;
+  font-size: clamp(1.2rem, 3vw, 2rem);
   margin-bottom: 0.5em;
 }
 
 .result-title > img {
-  height: 25pt;
+  height: 1em;
   vertical-align: middle;
 }
 .result {
-  font-size: 20pt;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   flex: 3;
   display: flex;
   flex-direction: column;
@@ -119,7 +127,7 @@ function getLevelTitle(ratio: number) {
   justify-content: center;
 }
 .result-progress-title {
-  font-size: 25pt;
+  font-size: clamp(1.2rem, 3vw, 2rem);
   flex: 1;
   display: flex;
   justify-content: center;
