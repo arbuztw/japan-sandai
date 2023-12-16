@@ -32,6 +32,9 @@ function getLevelTitle(ratio: number) {
     <div id="map-container">
       <div id="main-container">
         <div class="result-container">
+          <div class="page-title">
+            <b>日本三大XX制霸等級</b>
+          </div>
           <div v-if="visitedSandai.length > 0" class="result">
             <div class="result-title">
               <img src="/images/star.png" />
@@ -88,6 +91,15 @@ function getLevelTitle(ratio: number) {
   justify-content: center;
   height: 100%;
 }
+.page-title {
+  font-size: clamp(1.25rem, 3.25vw, 2.15rem);
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex: 0.5;
+  align-items: flex-end;
+  margin-top: 5%;
+}
 .result-container {
   padding: 0 5em;
   text-align: center;
@@ -119,7 +131,7 @@ function getLevelTitle(ratio: number) {
 }
 .result {
   font-size: clamp(0.85rem, 2vw, 1.2rem);
-  flex: 3;
+  flex: 2.5;
   display: flex;
   flex-direction: column;
   align-items: center;
