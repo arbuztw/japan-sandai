@@ -5,6 +5,7 @@ import { getChineseName } from "~/utils/sandai_types_util";
 import { getSpotChineseName } from "~/utils/spot_util";
 import { SandaiVisit } from "~/data/sandai_visit";
 import Spot from "~/types/spot";
+const config = useRuntimeConfig();
 const props = defineProps<{
   sandaiVisits: SandaiVisit[];
 }>();
@@ -23,7 +24,9 @@ const getCheckboxId = (spot: Spot) => `${spot}-checkbox`;
           v-for="sandaiVisit in sandaiVisits"
         >
           <img
-            :src="`/images/${getIconName(sandaiVisit.sandaiType)}.png`"
+            :src="`${config.app.baseURL}images/${getIconName(
+              sandaiVisit.sandaiType
+            )}.png`"
             class="sandai-img"
           />
           <div class="sandai-content">
