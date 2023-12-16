@@ -34,9 +34,9 @@ function getLevelTitle(ratio: number) {
         <div class="result-container">
           <div v-if="visitedSandai.length > 0" class="result">
             <div class="result-title">
-              <img src="images/star.png" />
+              <img src="/images/star.png" />
               全制霸
-              <img src="images/star.png" />
+              <img src="/images/star.png" />
             </div>
             <div class="sandai-items">
               <span v-for="sandai in visitedSandai" class="sandai-item"

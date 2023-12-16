@@ -14,7 +14,7 @@ const getCheckboxId = (spot: Spot) => `${spot}-checkbox`;
 <template>
   <div class="modal-overlay" @click="$emit('close-modal')">
     <div class="modal" @click.stop style="overflow-y: scroll">
-      <img class="check" src="images/wand.png" alt="123" />
+      <img class="check" src="/images/wand.png" alt="123" />
       <h6>選擇拜訪過的日本三大！</h6>
       <div id="sandai-box-container">
         <div
@@ -54,7 +54,7 @@ const getCheckboxId = (spot: Spot) => `${spot}-checkbox`;
         </div>
       </div>
       <div class="close" @click="$emit('close-modal')">
-        <img class="close-img" src="images/night.png" alt="" />
+        <img class="close-img" src="/images/night.png" alt="" />
       </div>
     </div>
   </div>
