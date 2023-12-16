@@ -8,7 +8,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="progress-bar">
+  <div id="progress-bar" class="progress-bar">
     <div class="progress-start"></div>
     <progress-bar-item
       v-for="sandaiVisit in sandaiVisits"
