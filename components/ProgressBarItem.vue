@@ -3,6 +3,7 @@ import { SandaiVisit } from "~/data/sandai_visit";
 import SandaiType from "~/types/sandai_type";
 import { getIconName, getColor } from "~/utils/sandai_types_util";
 
+const config = useRuntimeConfig();
 const props = defineProps<{
   sandaiVisit: SandaiVisit;
 }>();
@@ -20,7 +21,9 @@ const progressWidth = computed(() => {
   <div class="progress-bar-item" v-if="sandaiVisit.numVisit.value > 0">
     <div class="icon-container">
       <img
-        :src="`/images/${getIconName(sandaiVisit.sandaiType)}.png`"
+        :src="`${config.app.baseURL}images/${getIconName(
+          sandaiVisit.sandaiType
+        )}.png`"
         class="mark-icon"
       />
     </div>
