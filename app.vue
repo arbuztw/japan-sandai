@@ -119,7 +119,7 @@ function getLevelTitle(ratio: number) {
   vertical-align: middle;
 }
 .result {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(0.85rem, 2vw, 1.2rem);
   flex: 3;
   display: flex;
   flex-direction: column;
@@ -127,7 +127,7 @@ function getLevelTitle(ratio: number) {
   justify-content: center;
 }
 .result-progress-title {
-  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-size: clamp(1rem, 3vw, 2rem);
   flex: 1;
   display: flex;
   justify-content: center;
