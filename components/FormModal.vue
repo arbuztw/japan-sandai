@@ -102,10 +102,10 @@ const getCheckboxId = (spot: Spot) => `${spot}-checkbox`;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 20px 30px;
+  padding: 0.5em 0.5em;
   border-radius: 15px;
   background-color: #eee;
-  column-gap: 30px;
+  column-gap: 2em;
 }
 
 .sandai-img {
