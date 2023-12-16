@@ -54,7 +54,7 @@ const getCheckboxId = (spot: Spot) => `${spot}-checkbox`;
         </div>
       </div>
       <div class="close" @click="$emit('close-modal')">
-        <img class="close-img" src="/images/night.png" alt="" />
+        <img class="close-img" src="images/work-done.png" alt="" />
       </div>
     </div>
   </div>
@@ -90,7 +90,7 @@ const getCheckboxId = (spot: Spot) => `${spot}-checkbox`;
 }
 
 .close-img {
-  width: 25px;
+  width: 40px;
 }
 
 .check {
