@@ -11,7 +11,6 @@ const props = defineProps<{
 </script>
 
 <template>
-  <!-- <div id="japan-map-wrapper"> -->
   <!-- Created for MapSVG plugin: http://mapsvg.com -->
   <svg
     xmlns:mapsvg="http://mapsvg.com"
@@ -20,7 +19,7 @@ const props = defineProps<{
     xmlns:svg="http://www.w3.org/2000/svg"
     xmlns="http://www.w3.org/2000/svg"
     mapsvg:geoViewBox="123.658963 45.523885 145.820743 24.217586"
-    viewBox="90 0 400 400"
+    viewBox="90 0 350 400"
     id="japan-map"
   >
     <prefecture-map
@@ -29,7 +28,6 @@ const props = defineProps<{
     ></prefecture-map>
     <spot-map v-for="spot in Object.values(Spot)" :spot="spot"></spot-map>
   </svg>
-  <!-- </div> -->
 </template>
 
 <style scoped>

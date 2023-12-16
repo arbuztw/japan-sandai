@@ -23,7 +23,7 @@ function getLevelTitle(ratio: number) {
   else if (ratio <= 0.7) return "景點尋寶家 II";
   else if (ratio <= 0.8) return "老手冒險家";
   else if (ratio <= 0.9) return "景點征服者";
-  else "日本探險達人";
+  else return "日本探險達人";
 }
 </script>
 
@@ -34,9 +34,9 @@ function getLevelTitle(ratio: number) {
         <div class="result-container">
           <div v-if="visitedSandai.length > 0" class="result">
             <div class="result-title">
-              <img src="images/star.png" />
+              <img src="/images/star.png" />
               全制霸
-              <img src="images/star.png" />
+              <img src="/images/star.png" />
             </div>
             <div class="sandai-items">
               <span v-for="sandai in visitedSandai" class="sandai-item"
@@ -47,7 +47,7 @@ function getLevelTitle(ratio: number) {
           <div v-else class="result">還在稱霸三大的路上...</div>
           <div class="result-progress-title">
             制霸進度:
-            {{ Math.round(spotVisits.ratio.value * 100) }}%&nbsp;&nbsp;
+            {{ Math.round(spotVisits.ratio.value * 100) }}%<br />
             {{ getLevelTitle(spotVisits.ratio.value) }}
           </div>
         </div>
@@ -93,20 +93,32 @@ function getLevelTitle(ratio: number) {
   text-align: center;
   display: flex;
   flex-direction: column;
-  width: 600px;
+  box-sizing: border-box;
+  height: 100%;
+}
+@media (max-aspect-ratio: 1/1) {
+  #main-container {
+    justify-content: flex-start;
+  }
+  .result-container {
+    padding: 0;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    align-self: flex-start;
+  }
 }
 .result-title {
-  /* margin-top: 5rem; */
-  font-size: 25pt;
+  font-size: clamp(1.2rem, 3vw, 2rem);
   margin-bottom: 0.5em;
 }
 
 .result-title > img {
-  height: 25pt;
+  height: 1em;
   vertical-align: middle;
 }
 .result {
-  font-size: 20pt;
+  font-size: clamp(0.85rem, 2vw, 1.2rem);
   flex: 3;
   display: flex;
   flex-direction: column;
@@ -114,7 +126,7 @@ function getLevelTitle(ratio: number) {
   justify-content: center;
 }
 .result-progress-title {
-  font-size: 25pt;
+  font-size: clamp(1rem, 3vw, 2rem);
   flex: 1;
   display: flex;
   justify-content: center;

@@ -14,16 +14,22 @@ const getCheckboxId = (spot: Spot) => `${spot}-checkbox`;
 <template>
   <div class="modal-overlay" @click="$emit('close-modal')">
     <div class="modal" @click.stop style="overflow-y: scroll">
-      <img class="check" src="images/wand.png" alt="123" />
+      <img class="check" src="/images/wand.png" alt="123" />
       <h6>選擇拜訪過的日本三大！</h6>
       <div id="sandai-box-container">
-        <div class="sandai-box" v-for="sandaiVisit in sandaiVisits">
+        <div
+          class="sandai-box"
+          :style="{ borderColor: getColor(sandaiVisit.sandaiType) }"
+          v-for="sandaiVisit in sandaiVisits"
+        >
           <img
             :src="`/images/${getIconName(sandaiVisit.sandaiType)}.png`"
             class="sandai-img"
           />
           <div class="sandai-content">
-            <h3>{{ getChineseName(sandaiVisit.sandaiType) }}</h3>
+            <h3>
+              {{ getChineseName(sandaiVisit.sandaiType) }}
+            </h3>
             <div v-for="spotAttr in sandaiVisit.required_spots">
               <input
                 type="checkbox"
@@ -102,10 +108,11 @@ const getCheckboxId = (spot: Spot) => `${spot}-checkbox`;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 20px 30px;
+  padding: 0.5em 0.5em;
   border-radius: 15px;
   background-color: #eee;
-  column-gap: 30px;
+  column-gap: 2em;
+  border: 5px solid;
 }
 
 .sandai-img {

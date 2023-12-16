@@ -1,14 +1,19 @@
 <script lang="ts" setup>
 import { SandaiVisit } from "~/data/sandai_visit";
+import SandaiType from "~/types/sandai_type";
 import { getIconName, getColor } from "~/utils/sandai_types_util";
 
 const props = defineProps<{
   sandaiVisit: SandaiVisit;
 }>();
 
-const progressWidth = computed(
-  () => `${props.sandaiVisit.numVisit.value * 30}px`
-);
+const progressWidth = computed(() => {
+  const totalWidth = document.getElementById("progress-bar")!.offsetWidth;
+  return `${
+    ((totalWidth - 30) / Object.values(SandaiType).length / 3) *
+    props.sandaiVisit.numVisit.value
+  }px`;
+});
 </script>
 
 <template>
@@ -55,5 +60,14 @@ const progressWidth = computed(
   border-top: 2px solid #333;
   border-bottom: 2px solid #333;
   transition: width 0.3s;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .mark-icon {
+    display: none;
+  }
+  .mark {
+    display: none;
+  }
 }
 </style>
