@@ -23,7 +23,7 @@ function getLevelTitle(ratio: number) {
   else if (ratio <= 0.7) return "景點尋寶家 II";
   else if (ratio <= 0.8) return "老手冒險家";
   else if (ratio <= 0.9) return "景點征服者";
-  else "日本探險達人";
+  else return "日本探險達人";
 }
 </script>
 
@@ -93,10 +93,15 @@ function getLevelTitle(ratio: number) {
   text-align: center;
   display: flex;
   flex-direction: column;
-  width: 600px;
+  box-sizing: border-box;
+  height: 100%;
+}
+@media (max-aspect-ratio: 1/1) {
+  .result-container {
+    position: absolute;
+  }
 }
 .result-title {
-  /* margin-top: 5rem; */
   font-size: 25pt;
   margin-bottom: 0.5em;
 }
