@@ -95,7 +95,6 @@ function getLevelTitle(ratio: number) {
   flex-direction: column;
   box-sizing: border-box;
   height: 100%;
-  /* font-size: clamp(1rem, 2vw, 15rem); */
 }
 @media (max-aspect-ratio: 1/1) {
   #main-container {
