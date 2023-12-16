@@ -61,4 +61,13 @@ const progressWidth = computed(() => {
   border-bottom: 2px solid #333;
   transition: width 0.3s;
 }
+
+@media (max-aspect-ratio: 1/1) {
+  .mark-icon {
+    display: none;
+  }
+  .mark {
+    display: none;
+  }
+}
 </style>
