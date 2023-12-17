@@ -4,6 +4,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["@/assets/css/main.css"],
   app: {
-    baseURL: "/japan-sandai/",
+    baseURL: process.env.NUXT_BASE_URL || "",
   },
 });
