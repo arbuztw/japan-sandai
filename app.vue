@@ -25,6 +25,7 @@ function getLevelTitle(ratio: number) {
   else if (ratio <= 0.9) return "景點征服者";
   else return "日本探險達人";
 }
+useHead({title: "日本三大XX制霸等級"})
 </script>
 
 <template>
